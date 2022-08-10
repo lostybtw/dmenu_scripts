@@ -10,7 +10,7 @@ declare -a playlists=(
 
 choice=$(printf '%s\n' "${playlists[@]}" | dmenu -i -l 20 -p 'play playlists: ')
 
-if [["$choice" == "exit"]];then
+if [[ "$choice" == "exit" ]];then
     exit
 else
     link=$(printf '%s\n' "${choice}" | awk '{print $NF}' )
